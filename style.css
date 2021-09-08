@@ -3,6 +3,31 @@
     margin: 0;
     box-sizing: border-box;
   }
+  body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .snap-parent {
+    
+  	overflow-y: scroll;
+	  border: 1px solid gray;
+	  scroll-snap-type: y mandatory;
+
+  }
+
+  .scroll-snap{
+    padding: 3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    max-height: 100vh;
+    scroll-snap-align: start;
+  }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -57,11 +82,12 @@ ul {
   header{
       display: grid;
       grid-template-columns: 1fr 1fr;
-
+      position: absolute;
   }
   nav {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
   }
   main {
       height: 50vh;
@@ -83,3 +109,36 @@ ul {
       -webkit-text-stroke: 2px black; /* width and color */
       font-family: sans; 
   }
+  /*
+  #aboutme {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 70% auto;
+    background-color: grey;
+    padding: 1rem;
+  }*/
+  
+  #profilepic{
+    max-width:100%;
+    height:auto;
+    float: left;
+    padding-top: 2rem;
+  }
+
+
+
+
+/* Portfolio */
+.album{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.album img{
+    max-width:100%;
+    height:auto;
+}
+  
+  
+
+
