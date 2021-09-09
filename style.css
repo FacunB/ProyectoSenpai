@@ -9,15 +9,17 @@
     line-height: 1.5;
   }
 
-  .snap-parent {
+  .scroll-container {
     
   	overflow-y: scroll;
 	  border: 1px solid gray;
 	  scroll-snap-type: y mandatory;
-
+    max-height: 100vh;
   }
 
-  .scroll-snap{
+  .scroll-area{
+    height: 100vh;
+    
     padding: 3rem;
     font-size: 1.4rem;
     text-align: center;
@@ -25,7 +27,7 @@
     flex-flow: column;
     justify-content: center;
     max-height: 100vh;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 
 ul {
