@@ -6,44 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Proyecto</title>
+    <title>Proyecto</title>    
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn"><i data-feather="menu"></i></a>
-                <div class="dropdown-content">
-                    <li><a href="">Sobre mi</a></li>
-                    <li><a href="">Mis fotos</a></li>
-                    <li><a href="">Mi trabajo</a></li>
-                    <li><a href="">Contacto</a></li>
-                </div>
-            </ul>            
-        </nav>
-    </header>
+    <nav class="nav">    
+            <label for="toggle" class="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <ul class="menu">
+              <li><a href="#"> <i data-feather="camera"></i></a></li>
+              <li><a href="#">Sobre mi</a></li>
+              <li><a href="#">Mis fotos</a></li>
+              <li><a href="#">Mi trabajo</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+    </nav>
+    
     <div class="scroll-container">
         <main class="scroll-area">
-            <h1>Fulanito Fotografias</h1>
+            <h1>Facundo Fotografias</h1>
         </main>
+        <div class="parallaximg1">
+            <div class="ptext">
+                <h2 class="border">Sobre mi</h2>
+            </div>
+        </div>
         <article class="scroll-area" id="aboutme">
-            <div class="texto">
-                <h2>Sobre mi</h2>
+            <section>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea laborum doloribus hic qui enim soluta et omnis at blanditiis perferendis facilis optio, numquam, maiores saepe dicta porro. Nisi, minus non?</p>
-            </div>               
-             <img src="assets/img/stock (1).jpg" alt="pfp" id="profilepic"> 
+            </section>               
         </article>
         
+        
+        <div class="parallaximg2">
+            <div class="ptext">
+                <h2 class="border">Mi trabajo</h2>
+            </div>
         <article class="scroll-area">
-            <section>
-                <h2>
-                    Mi trabajo
-                </h2>
+            </div>
+            <section>                
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, saepe voluptatem aliquid ullam repellendus delectus. Vitae odit magni minima quae earum, reprehenderit, eligendi ipsum laboriosam temporibus, modi perspiciatis fuga explicabo!</p>
             </section>
             <aside>
                 Bodas <br> Baby Showers <br> Fotos de compromiso <br> Exteriores
             </aside>
+        </article>
+        <article class="scroll-area">
+            <div class="parallaximg3">
+                <div class="ptext">
+                    <h2 class="border">Contacto</h2>
+                </div>
+            </div>
+            <section>
+                <p>Podes encontrarme por mis redes:</p>
+            </section>
+
         </article>
 
     </div>

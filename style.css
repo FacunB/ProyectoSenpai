@@ -1,14 +1,56 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    line-height: 1.5;
-  }
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-weight: 700;
+  height: 100vh;
+  font-family: Georgia, serif;
 
+}
+.nav {
+  border-bottom: 1px solid #eaeaeb;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  background-image: url(/assets/img/stock\ \(7\).jpg);
+}
+.menu {
+  margin: 0 30px 0 0;
+  display: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: darkslategrey;
+  margin: 0 10px;
+  line-height: 70px;
+  display:block;
+  position: relative;
+}
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 60px;
+  display: block;
+  cursor: pointer;
+  width: 26px;
+  float: right;
+}
+#toggle {
+  display:none;
+}
+#toggle:checked + .menu {
+  display: block;
+}
+li:first-child{
+  margin-right: auto;
+  width: 1.5rem;
+  display: block;
+  padding-right: 2rem;
+} 
+
+    
   .scroll-container {
     
   	overflow-y: scroll;
@@ -18,8 +60,7 @@
   }
 
   .scroll-area{
-    height: 100vh;
-    
+    height: 100vh;    
     padding: 3rem;
     font-size: 1.4rem;
     text-align: center;
@@ -30,73 +71,13 @@
     scroll-snap-align: center;
   }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
-  
-  li.dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  header{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: absolute;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-  }
   main {
       height: 50vh;
-      background-image: url("assets/img/background.jpg");
+      background-image: url("assets/img/stock\ \(8\).jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center;
+      
 
       display: flex;
       flex-direction: column;
@@ -105,21 +86,13 @@ ul {
 
       font-size: 200%;
       font-weight: 700;
-    text-align: center;
-    padding: 2%;
-      color: white;
+      text-align: center;
+      padding: 2%;
+      color: rgb(133, 224, 179);
       -webkit-text-stroke: 2px black; /* width and color */
       font-family: sans; 
   }
-  /*
-  #aboutme {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 70% auto;
-    background-color: grey;
-    padding: 1rem;
-  }*/
-  
+    
   #profilepic{
     max-width:100%;
     height:auto;
@@ -127,20 +100,87 @@ ul {
     padding-top: 2rem;
   }
 
+  h2 p {
+    text-align: center;
+  }
 
 
+  @media (min-width:700px ) {
+    body{
+      display: flex;
+    }
+    .scroll-container {
+      scroll-snap-stop: normal;
+          }
+          .scroll-area{
+      scroll-snap-align: none;
 
-/* Portfolio */
-.album{
-  display: grid;
-  grid-template-columns: auto auto;
-}
+          }
+    
 
-.album img{
-    max-width:100%;
-    height:auto;
-}
+    label {
+      display: none;
+    }
+    .menu{
+      display:grid;
+      width: 100%;
+    }
+    .menu li{
+      display:inline-block;
+      list-style-type:none;
+      margin-right:-4px;
+      padding:10px;
+      border-right:1px solid white; 
+   
+    }
+    li:first-child{
+      margin-right: auto;
+      width: 1.5rem;    
+      padding-right: 2rem;
+    } 
+
+    .parallaximg1, .parallaximg2, .parallaximg3{
+      position: relative;
+      opacity: 0.70;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .parallaximg1{
+      background-image: url(/assets/img/pfp.jpg);
+      min-height: 100%;
+    }
+    .parallaximg2{
+      background-image: url(/assets/img/parallax\ \(1\).jpg);
+      min-height: 100%;
+    }
+    .parallaximg3{
+      background-image: url(/assets/img/parallax\ \(2\).jpg);
+      min-height: 100%;
+    }
+  }
+  
+  @media (min-width:1024px ) {
+    
+  }
+
+
   
   
+  
 
 
+
+  /* Portfolio */
+  .album{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+  .album img{
+      max-width:100%;
+      height:auto;
+  }
+    
