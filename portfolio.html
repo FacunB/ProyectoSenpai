@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mi Portfolio</title>    
+    <link rel="stylesheet" href="portfoliostyle.css">
+    <title>Mi Portfolio</title>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <ul class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn"><i data-feather="menu"></i></a>
-                <div class="dropdown-content">
-                    <li><a href="index.html">Pagina principal</a></li>                    
-                </div>
+            <ul>
+                <li><a href="index.html"><i data-feather="home"></i></a></li>
             </ul>
-            
+
         </nav>
     </header>
-    <article>
+    <section>
         <h2>Mis fotos</h2>
-        <div class="album">
+        <div class="gallery">
             <img src="assets/img/stock (2).jpg" alt="">
             <img src="assets/img/stock (3).jpg" alt="">
             <img src="assets/img/stock (4).jpg" alt="">
             <img src="assets/img/stock (5).jpg" alt="">
             <img src="assets/img/stock (6).jpg" alt="">
             <img src="assets/img/stock (7).jpg" alt="">
+        </div>
+    </section>
 
-        </div>        
-    </article>
+    <script>
+        feather.replace()
+    </script>
+    <script src="app.js"></script>
 </body>
+
 </html>
