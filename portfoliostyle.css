@@ -34,7 +34,7 @@ h2{
 .gallery{
     display: flex;
 
-    max-width: 500px;
+    max-width: 800px;
     height: 300px;
     width: 100%;
 
@@ -44,25 +44,61 @@ h2{
 
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
 }
 
-.imgstyle{
+.gallery a{
+    display: block; 
+    height: 600px;
     width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
 }
 
+a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.album-selection form{
+    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* x-axis */
+  align-items: center;
+  /* y-axis */
+  font-size: 1.8em;
+  background: #f2f2e2}
+
+  form label{
+      padding-right: 25px;
+  }
+
+
 @media (min-width:700px ){
     .gallery{
+        display: grid;
         margin: 10px 50px;
+        scroll-snap-type: none;
+        max-width: none;
+        height: auto;
+        width: auto;
+        overflow-x: unset;
     
     }
     
+    .gallery a{
+        height: unset;
+    }
     .gallery img{
         width: 70vh;
         padding: 20px ;
         filter: grayscale(100);
         transition: 1s;
+        height: unset;
     }
     
     .gallery img:hover{
