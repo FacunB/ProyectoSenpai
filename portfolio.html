@@ -13,27 +13,29 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html"><i data-feather="home"></i></a></li>
-            </ul>
+            <a href="index.html"><i data-feather="home"></i></a>
         </nav>
     </header>
     <section>
         <div class="album-description">
-            <ul class="albumselector">
-                <li id="gallery1">Amarillo</li>
-                <li id="gallery2">Azul</li>
-                <li id="gallery3">Rojo</li>
-                <li id="gallery4">Verde</li>
-            </ul>
+            <h2>Albums</h2>
+            <input type="radio" name="album" id="amarillo" value="1" checked onclick="changeAlbum(this.value)">
+            <label for="amarillo">Amarillo</label>
+            <input type="radio" name="album" id="azul" value="2" onclick="changeAlbum(this.value)">
+            <label for="azul">Azul</label>
+            <input type="radio" name="album" id="rojo" value="3" onclick="changeAlbum(this.value)">
+            <label for="rojo">Rojo</label>
+            <input type="radio" name="album" id="verde" value="4" onclick="changeAlbum(this.value)">
+            <label for="verde">Verde</label>
+            
         </div>
-        <h2>Mis fotos</h2>
+        
         <div class="gallery" id="gallery">
-            <a href="assets/img/horizontal2/h2 (1).jpg"><img src="assets/img/horizontal2/h2 (1).jpg" alt=""></a>
-            <a href="assets/img/horizontal2/h2 (2).jpg"><img src="assets/img/horizontal2/h2 (2).jpg" alt=""></a>
-            <a href="assets/img/horizontal2/h2 (3).jpg"><img src="assets/img/horizontal2/h2 (3).jpg" alt=""></a>
-            <a href="assets/img/horizontal2/h2 (4).jpg"><img src="assets/img/horizontal2/h2 (4).jpg" alt=""></a>
-            <a href="assets/img/horizontal2/h2 (5).jpg"><img src="assets/img/horizontal2/h2 (5).jpg" alt=""></a>
+            <a href="assets/img/horizontal1/h1.jpg"><img src="assets/img/horizontal1/h1.jpg" alt=""></a>
+            <a href="assets/img/horizontal1/h2.jpg"><img src="assets/img/horizontal1/h2.jpg" alt=""></a>
+            <a href="assets/img/horizontal1/h3.jpg"><img src="assets/img/horizontal1/h3.jpg" alt=""></a>
+            <a href="assets/img/horizontal1/h4.jpg"><img src="assets/img/horizontal1/h4.jpg" alt=""></a>
+            <a href="assets/img/horizontal1/h5.jpg"><img src="assets/img/horizontal1/h5.jpg" alt=""></a>
         </div>
     </section>
 
