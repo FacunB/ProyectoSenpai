@@ -8,6 +8,15 @@ body {
   font-family: Georgia, serif;
 
 }
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: auto;
+  margin-top: auto;
+}
 .inactive {
   pointer-events: none;
   cursor: default;
@@ -17,7 +26,6 @@ body {
   text-align: right;
   height: 70px;
   line-height: 70px;
-  background-image: url(/assets/img/stock\ \(7\).jpg);
 }
 .menu {
   margin: 0 30px 0 0;
