@@ -7,7 +7,7 @@ html, body {padding:0; margin:0; height:100%;}
 body {
   font-weight: 700;
   height: 100vh;
-  font-family: Georgia, serif;
+  font-family: Georgia, serif !important;
 
 }
 #root {

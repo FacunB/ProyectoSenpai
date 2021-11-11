@@ -23,12 +23,13 @@ section{
     justify-content: center;
     align-items: center;
 }
-h2{
+h2, h1{
     text-align: center;
     padding: 2rem;
     font-size: 4rem;
     text-decoration: darkseagreen;
     color: darkseagreen;
+    text-shadow: 5px 8px 8px 8px, rgba(0, 0, 0, 0.5);
 }
 
 .gallery{

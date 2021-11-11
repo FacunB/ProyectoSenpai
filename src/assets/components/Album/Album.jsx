@@ -1,6 +1,6 @@
-import { padding } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import '../../styles/album.css'
+import Gallery from './Gallery.jsx';
 
 
 export const Album =() => {
@@ -28,36 +28,30 @@ export const Album =() => {
         
         <section>
             <div className="scroll-area">
-                <h2>Albums</h2> 
-                <form action="">
-                   
+                <h2>Albums</h2>                                    
                 {
                     albums.map((item, index)=>{
                         return(
-                            <>
+                            
                                 
-                                <a href="#" style={{padding: "5px"}} onClick={()=>setGallery(item.album)}>{item.nombre}</a>
+                                <a href="#" 
+                                style={{padding: "5px"}} 
+                                onClick={()=>setGallery(item.album)}>
+                                    {item.nombre}
+                                </a>
                                 
-                            </>
+                            
                         )
                     })
-                }             
-            </form>         
-            </div>
+                }            
+                     
+            </div>    
+
+            <Gallery
+            gallery = {gallery}
+            />    
             
             
-            <div className="gallery" id="gallery">
-            {
-                    gallery.map((item, index)=>{
-                        return(
-                            <>
-                               <a href={item.imgSrc}><img src={item.imgSrc} alt=""/></a>
-                            </>
-                        )
-                    })
-                }   
-                
-            </div>
         </section>
        
     )
