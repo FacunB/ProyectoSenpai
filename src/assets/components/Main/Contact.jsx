@@ -1,10 +1,12 @@
 import React from "react";
-import { Facebook } from 'react-feather';
-import { Instagram } from 'react-feather';
-import { Twitter } from 'react-feather';
+import { useState } from "react";
+import {Form} from './Contact/form'
+import {Social} from './Contact/social'
+
 
 
 export const Contact = () => {
+    
     return (
         <div className="scroll-area">
             <div className="parallaximg3">
@@ -13,21 +15,9 @@ export const Contact = () => {
                 </div>
             </div>
             <section>
-                <h2 className="mobiletext">Contacto</h2>
-                <p>Podes encontrarme por mis redes:</p>
-                <div className="iconcontainer">
-                    <div className="icons">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/El.facu.xB">
-                            <Facebook></Facebook>
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/facunb/">
-                            <Instagram></Instagram>
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="No hay xd">
-                            <Twitter></Twitter>
-                        </a>
-                    </div>
-                </div>
+                <h2 className="mobiletext">Contacto</h2>                
+                    <Form/>
+                    <Social/>                              
             </section> 
         </div>
     )

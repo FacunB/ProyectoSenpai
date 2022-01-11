@@ -18,7 +18,7 @@ function App() {
             <Route path="/albums" exact>              
               <Album/>            
             </Route>
-            <Redirect to="/"/>
+            {/* <Redirect to="/"/> */}
           </Switch>
           
         </div>

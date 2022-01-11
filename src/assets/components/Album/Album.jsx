@@ -10,7 +10,7 @@ export const Album =() => {
 
 
     useEffect(()=>{
-        fetch("http://localhost:4000/albums")
+        fetch("http://localhost:7000/albums")
             .then(data => data.json())
             .then(data => {console.log(data);
                             setAlbums(data);
