@@ -1,3 +1,4 @@
+
 const {Client}  = require('pg');
 
 const config = {
@@ -5,17 +6,20 @@ const config = {
     database: 'Albums',
     user: 'postgres',
     password:'admin'
-}
-
-async function getAlbum(req, res){
+  }
+   async function getAlbum(req, res){
     const client = new Client(config)
     await client.connect();
-    const result = await client.query("select * from public.images")
+    const result = await client.query("select * from public.prueba")
     console.log(result.rows);
     await client.end();
       res.send(result.rows);
 }
-
+ 
+/*
+function getAlbum(req, res){
+  res.send(albums)
+}*/
 let albums = 
     [{
         "nombre":"Amarillo",

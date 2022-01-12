@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const Gallery = ({gallery}) =>{
+    console.log(gallery)
    
     return (
 
@@ -10,7 +11,7 @@ const Gallery = ({gallery}) =>{
                     gallery.map((item, index)=>{
                         return(
                             
-                               <a href={item.imgSrc}><img src={item.imgSrc} alt=""/></a>
+                               <a href={item}><img src={item} alt=""/></a>
                             
                         )
                     })
