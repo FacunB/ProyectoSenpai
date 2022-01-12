@@ -13,9 +13,7 @@ async function getAlbum(req, res){
     const result = await client.query("select * from public.images")
     console.log(result.rows);
     await client.end();
-    res.send({
-        albums: res.rows
-    });
+      res.send(result.rows);
 }
 
 let albums = 
