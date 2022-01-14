@@ -8,18 +8,23 @@ const config = {
     password:'admin'
   }
    async function getAlbum(req, res){
-    const client = new Client(config)
+    try {
+      const client = new Client(config)
     await client.connect();
     const result = await client.query("select * from public.prueba")
     console.log(result.rows);
     await client.end();
-      res.send(result.rows);
+      res.status(200).send(result.rows);
+    } catch (error){
+      console.error('No se puso conectar a BD :', error);
+        res.sendStatus(510)
+    }
 }
  
 /*
 function getAlbum(req, res){
   res.send(albums)
-}*/
+}
 let albums = 
     [{
         "nombre":"Amarillo",
@@ -132,7 +137,7 @@ let albums =
       
     ]
   
-
+*/
 module.exports = {
     getAlbum
 }

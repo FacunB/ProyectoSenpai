@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
+const bodyParser = require('body-parser')
 
 const albumsRoutes = require('./albums/routes');
 
@@ -28,5 +29,5 @@ app.use('/albums', albumsRoutes);
 
 
 app.listen(7000, (req, res)=>{
-    console.log("App listening port 8000")
+    console.log("App listening port 7000")
 })
