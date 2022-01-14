@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fba8a4;
+    background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+}    
+
+a svg{
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    fill:darkgoldenrod;
+    color: darkorchid;
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2, h1{
+    text-align: center;
+    padding: 2rem;
+    font-size: 4rem;
+    text-decoration: darkseagreen;
+    color: darkseagreen;
+    text-shadow: 5px 8px 8px 8px, rgba(0, 0, 0, 0.5);
+}
+
+.gallery{
+    display: flex;
+
+    max-width: 800px;
+    height: 100vh;
+    width: 100%;
+
+    overflow-x: scroll;
+    scroll-snap-type: x 
+    mandatory;
+
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+}
+
+.gallery a{
+    display: block; 
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+a img{
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.album-selection form{
+    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* x-axis */
+  align-items: center;
+  /* y-axis */
+  font-size: 1.8em;
+  background: #f2f2e2}
+
+  form label{
+      padding-right: 25px;
+  }
+
+
+@media (min-width:700px ){
+    .gallery{
+        display: grid;
+        margin: 10px 50px;
+        scroll-snap-type: none;
+        max-width: none;
+        height: auto;
+        width: auto;
+        overflow-x: unset;
+    
+    }
+    
+    .gallery a{
+        height: unset;
+    }
+    .gallery img{
+        width: 70vh;
+        padding: 20px ;
+        filter: grayscale(100);
+        transition: 1s;
+        height: unset;
+    }
+    
+    .gallery img:hover{
+        filter: none;
+        transform: scale(1.1);
+    }
+    
+}
