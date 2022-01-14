@@ -1,19 +1,21 @@
 
 const {Client}  = require('pg');
 
+
 const config = {
-    host: 'localhost',
-    database: 'Albums',
-    user: 'postgres',
-    password:'admin'
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    user: process.env.PGUSER,
+    password:process.env.PGPASSWORD
   }
    async function getAlbum(req, res){
     try {
       const client = new Client(config)
     await client.connect();
-    const result = await client.query("select * from public.prueba")
+    const result = await client.query("select * from public.images")
     console.log(result.rows);
     await client.end();
+    console.log('Connection has been established successfully.');
       res.status(200).send(result.rows);
     } catch (error){
       console.error('No se puso conectar a BD :', error);

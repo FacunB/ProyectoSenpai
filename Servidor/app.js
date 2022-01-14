@@ -1,30 +1,25 @@
 const express = require('express');
 const app = express();
-const cors = require('cors')
-const bodyParser = require('body-parser')
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
 
 const albumsRoutes = require('./albums/routes');
+const formRoutes = require('./forms/routes')
+
+require('dotenv').config();
 
 app.use(cors());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use(function(req, res, next){
     console.log('Request logged at ', Date.now());
     next();
 });
 
-app.get('/health',async(req,res)=>{
-    try {
-        await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
-        res.sendStatus(200)
-
-      } catch (error) {
-        console.error('Unable to connect to the database:', error);
-        res.sendStatus(510)
-      }
-});
-
 app.use('/albums', albumsRoutes);
+app.use('/contact', formRoutes);
 
 
 
