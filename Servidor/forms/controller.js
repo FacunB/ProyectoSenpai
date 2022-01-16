@@ -1,26 +1,22 @@
 
-function getForms(req,res){
-    res.send(forms)
+const pool = require('../services/pool')
+
+
+async function postForms(req, res){
+    try {
+        let form = req.body;
+        const result = await pool.query("insert into public.consultas(name, email, consulta) values ($1, $2, $3) returning *",
+        [form.name, form.email, form.content])
+        console.log(result.rows);
+        console.log('Consulta enviada correctamente');
+        res.status(200).send({message:'La consulta se envió correctamente', form: form});
+      }catch (error){
+        console.error('No se puso conectar a BD :', error);
+          res.sendStatus(510)
+      }
 }
 
-function postForms(req,res){
-    console.log(req.body);
-    let form = req.body;
-    forms.push(form);
-    res.send({message: "Enviado correctamente", form: form})
-    console.log(forms)
-    
-}
-
-let forms = [
-    {
-        "name":"name",
-        "email":"email",
-        "content":"content"
-    }
-]
 
 module.exports = {
-    getForms,
     postForms
 }
