@@ -23,7 +23,6 @@ export const Album =() => {
         setGallery(albums[0].album)
     },[albums])
 
-    let albumName = ['Amarillo', 'Azul', 'Verde']
 
     return(
         

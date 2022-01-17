@@ -6,6 +6,7 @@ import { Navbar } from './assets/components/Global/Navbar';
 import {Main} from './assets/components/Main/Main'
 import { Album } from './assets/components/Album/Album'
 import {Form} from './assets/components/Main/Contact/Form'
+import { Questions } from './assets/components/Main/Contact/questions';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/contact" exact>
               <Form/>
+            </Route>
+            <Route path="/query" exact>
+              <Questions/>
             </Route>
             {/* <Redirect to="/"/> */}
           </Switch>

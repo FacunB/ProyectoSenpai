@@ -14,7 +14,7 @@ export const Form = () =>{
     const [contentError, setContentError] = useState ("")
 
 
-    const Validacion = () => {
+    const validacion = () => {
         if((utils.validacionName(name)  || utils.validacionEmail(email))||
             utils.validacionContent(content)) 
             {
@@ -35,16 +35,16 @@ export const Form = () =>{
         <>
             <p>Haceme una pregunta! te respondere al correo asociado</p>
                     <form method='post' action='http://localhost:7000/contact' encType='application/json'>
-                        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" onChange={e => setName (e.target.value)} value={name}/>
+                        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" onChange={e => setName (e.target.value)} value={name} required/>
                         {nameError && (<p className="error">Verifique su nombre</p>)}
 
-                        <input type="text" id="email" name="email" placeholder="Ingresa tu correo" onChange={e => setEmail (e.target.value)} value={email} />
+                        <input type="text" id="email" name="email" placeholder="Ingresa tu correo" onChange={e => setEmail (e.target.value)} value={email} required/>
                         {emailError && (<p className="error">Verifique correo</p>)}
 
-                        <input type="text" id="content" name="content" placeholder="Ingresa tu pregunta" onChange={e => setContent (e.target.value)} value={content} />
+                        <input type="text" id="content" name="content" placeholder="Ingresa tu pregunta" onChange={e => setContent (e.target.value)} value={content} required/>
                         {contentError && (<p className="error">Verifique su consulta</p>)}
 
-                        <button id="send" onClick={Validacion}>Enviar</button>
+                        <button id="send" onClick={e=>validacion()}>Enviar</button>
                     </form>
         </>
     )
